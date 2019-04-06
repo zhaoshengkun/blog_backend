@@ -1,0 +1,43 @@
+server.port=8088
+
+# thymeleaf
+spring.thymeleaf.prefix=classpath:/templates/
+spring.thymeleaf.check-template-location=true
+spring.thymeleaf.suffix=.html
+spring.thymeleaf.encoding=UTF-8
+spring.thymeleaf.mode=HTML5
+spring.thymeleaf.cache=false
+
+#scan
+#spring.mvc.static-path-pattern=/static/**
+
+#DataSource
+spring.datasource.url=jdbc:mysql://218.61.208.116:3306/sadev20180035?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+spring.datasource.username=root
+spring.datasource.password=nE4!3#prEwru
+spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+spring.datasource.type=com.alibaba.druid.pool.DruidDataSource
+
+spring.datasource.filters=stat, wall, log4j
+spring.datasource.maxActive=20
+spring.datasource.initialSize=1
+spring.datasource.maxWait=60000
+spring.datasource.minIdle=1
+spring.datasource.timeBetweenEvictionRunsMillis=60000
+spring.datasource.minEvictableIdleTimeMillis=300000
+spring.datasource.validationQuery=select 'x'
+spring.datasource.testWhileIdle=true
+spring.datasource.testOnBorrow=false
+spring.datasource.testOnReturn=false
+spring.datasource.poolPreparedStatements=true
+spring.datasource.maxOpenPreparedStatements=20
+
+#sql
+#spring.jpa.properties.hibernate.hbm2ddl.auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+
+#oauth
+#logging.level.org.org.springframework.security=INFO
+#security
+

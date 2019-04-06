@@ -1,0 +1,45 @@
+server:
+  port: 8080
+  
+security:
+  oauth2:
+    #resource:
+    #  filter-order: 3
+#    client:
+#      scope: read,write
+#      auto-approve-scopes: '.*'
+#    authorization:
+#      check-token-access: permitAll()
+    client:
+      client-id: pias_evss
+      client-secret: 654321
+      #accessTokenUri: http://127.0.0.1:8080/oauth/token
+      #userAuthorizationUri: http://127.0.0.1:8080/oauth/authorize
+    #resource:
+      #token-info-uri: http://127.0.0.1:8080/oauth/check_token
+  
+
+---
+spring:  profiles: dev  datasource:    type: "com.alibaba.druid.pool.DruidDataSource"
+   driver-class-name: "com.mysql.jdbc.Driver"
+   url: jdbc:mysql://47.105.149.217:3306/tongtong?useUnicode=true&CharactorEncoding=UTF-8&useSSL=false
+   username: root
+   password: 925815liA.
+  jpa:
+    show-sql: true
+   
+  devtools:    restart:      enabled: true 
+---
+spring:
+  profiles: sit
+  datasource: 
+   type: "com.alibaba.druid.pool.DruidDataSource"
+   driver-class-name: "com.mysql.jdbc.Driver"
+   url: jdbc:mysql://47.105.149.217:3306/tongtong?useUnicode=true&CharactorEncoding=UTF-8&useSSL=false
+   username: root
+   password: 925815liA.
+  jpa:    show-sql: true
+   
+  devtools:
+    restart:
+      enabled: true         
