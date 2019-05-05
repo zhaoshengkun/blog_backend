@@ -1,6 +1,6 @@
 server:
   port: 8080
-  2222
+
 security:
   oauth2:
     #resource:
